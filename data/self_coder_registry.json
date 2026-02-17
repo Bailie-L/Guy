@@ -1,0 +1,422 @@
+{
+  "updated_at": 1757929978.0732136,
+  "budget": {
+    "target_pct": 5.0,
+    "burst_pct": 10.0,
+    "auto_skill_pct": 7.8,
+    "enabled": false
+  },
+  "baseline": {
+    "non_auto_avg": 0.01761361141602608,
+    "non_auto_nonzero_rate": 44.90238611713666,
+    "sample": 2000
+  },
+  "designated_candidate": null,
+  "skills": {
+    "auto_skill_1756569536_16": {
+      "status": "retired",
+      "strikes": 218,
+      "q_fence": 1e-06,
+      "uses": 4,
+      "avg_reward": 0.0,
+      "last_tick": 1201968
+    },
+    "auto_skill_1757276708_37": {
+      "status": "retired",
+      "strikes": 217,
+      "q_fence": 1e-06,
+      "uses": 1,
+      "avg_reward": 0.0,
+      "last_tick": 1200410
+    },
+    "auto_skill_1756305166_8": {
+      "status": "retired",
+      "strikes": 213,
+      "q_fence": 1e-06,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1201705
+    },
+    "auto_skill_1757407363_42": {
+      "status": "retired",
+      "strikes": 225,
+      "q_fence": 1e-06,
+      "uses": 3,
+      "avg_reward": 0.0,
+      "last_tick": 1202077
+    },
+    "auto_skill_1756478298_15": {
+      "status": "retired",
+      "strikes": 215,
+      "q_fence": 1e-06,
+      "uses": 5,
+      "avg_reward": 0.0,
+      "last_tick": 1202155
+    },
+    "auto_skill_1757290727_39": {
+      "status": "retired",
+      "strikes": 215,
+      "q_fence": 1e-06,
+      "uses": 3,
+      "avg_reward": 0.0,
+      "last_tick": 1201455
+    },
+    "auto_skill_1756659271_19": {
+      "status": "retired",
+      "strikes": 209,
+      "q_fence": 1e-06,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1201385
+    },
+    "auto_skill_1756131898_1": {
+      "status": "retired",
+      "strikes": 217,
+      "q_fence": 1e-06,
+      "uses": 3,
+      "avg_reward": 0.0,
+      "last_tick": 1202074
+    },
+    "auto_skill_1757001311_30": {
+      "status": "retired",
+      "strikes": 202,
+      "q_fence": 1e-06,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1201995
+    },
+    "auto_skill_1757290726_38": {
+      "status": "retired",
+      "strikes": 202,
+      "q_fence": 1e-06,
+      "uses": 7,
+      "avg_reward": 0.0,
+      "last_tick": 1202180
+    },
+    "auto_skill_1756912355_25": {
+      "status": "retired",
+      "strikes": 212,
+      "q_fence": 1e-06,
+      "uses": 1,
+      "avg_reward": 0.0,
+      "last_tick": 1201408
+    },
+    "auto_skill_1757001308_29": {
+      "status": "retired",
+      "strikes": 190,
+      "q_fence": 1e-06,
+      "uses": 1,
+      "avg_reward": 0.0,
+      "last_tick": 1201257
+    },
+    "auto_skill_1756478297_14": {
+      "status": "retired",
+      "strikes": 227,
+      "q_fence": 1e-06,
+      "uses": 3,
+      "avg_reward": 0.0,
+      "last_tick": 1202179
+    },
+    "auto_skill_1756391722_12": {
+      "status": "retired",
+      "strikes": 213,
+      "q_fence": 1e-06,
+      "uses": 4,
+      "avg_reward": 0.0,
+      "last_tick": 1202132
+    },
+    "auto_skill_1756755457_24": {
+      "status": "retired",
+      "strikes": 207,
+      "q_fence": 1e-06,
+      "uses": 1,
+      "avg_reward": 0.0,
+      "last_tick": 1202069
+    },
+    "auto_skill_1756132041_3": {
+      "status": "retired",
+      "strikes": 213,
+      "q_fence": 1e-06,
+      "uses": 4,
+      "avg_reward": 0.0,
+      "last_tick": 1202147
+    },
+    "auto_skill_1756131990_2": {
+      "status": "retired",
+      "strikes": 200,
+      "q_fence": 1e-06,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1202086
+    },
+    "auto_skill_1756478295_13": {
+      "status": "retired",
+      "strikes": 207,
+      "q_fence": 1e-06,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1202013
+    },
+    "auto_skill_1757087789_32": {
+      "status": "retired",
+      "strikes": 210,
+      "q_fence": 1e-06,
+      "uses": 1,
+      "avg_reward": 0.0,
+      "last_tick": 1201828
+    },
+    "auto_skill_1757181310_34": {
+      "status": "retired",
+      "strikes": 206,
+      "q_fence": 1e-06,
+      "uses": 1,
+      "avg_reward": 0.0,
+      "last_tick": 1202084
+    },
+    "auto_skill_1757407362_41": {
+      "status": "retired",
+      "strikes": 193,
+      "q_fence": 1e-06,
+      "uses": 4,
+      "avg_reward": 0.0,
+      "last_tick": 1201726
+    },
+    "auto_skill_1756391716_10": {
+      "status": "retired",
+      "strikes": 209,
+      "uses": 4,
+      "avg_reward": 0.0,
+      "last_tick": 1201992
+    },
+    "auto_skill_1756659283_21": {
+      "status": "retired",
+      "strikes": 220,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1202113
+    },
+    "auto_skill_1756569538_17": {
+      "status": "retired",
+      "strikes": 213,
+      "q_fence": 1e-06,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1201827
+    },
+    "auto_skill_1756391721_11": {
+      "status": "retired",
+      "strikes": 193,
+      "q_fence": 1e-06,
+      "uses": 3,
+      "avg_reward": 0.0,
+      "last_tick": 1202171
+    },
+    "auto_skill_1757192337_35": {
+      "status": "retired",
+      "strikes": 204,
+      "q_fence": 1e-06,
+      "uses": 4,
+      "avg_reward": 0.0,
+      "last_tick": 1202067
+    },
+    "auto_skill_1757087791_33": {
+      "status": "retired",
+      "strikes": 206,
+      "q_fence": 1e-06,
+      "uses": 4,
+      "avg_reward": 0.0,
+      "last_tick": 1201672
+    },
+    "auto_skill_1756218470_4": {
+      "status": "retired",
+      "strikes": 194,
+      "q_fence": 1e-06,
+      "uses": 3,
+      "avg_reward": 0.0,
+      "last_tick": 1201830
+    },
+    "auto_skill_1757087787_31": {
+      "status": "retired",
+      "strikes": 210,
+      "q_fence": 1e-06,
+      "uses": 1,
+      "avg_reward": 0.0,
+      "last_tick": 1201350
+    },
+    "auto_skill_1756218471_5": {
+      "status": "retired",
+      "strikes": 218,
+      "q_fence": 1e-06,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1201831
+    },
+    "auto_skill_1756912384_26": {
+      "status": "retired",
+      "strikes": 204,
+      "q_fence": 1e-06,
+      "uses": 4,
+      "avg_reward": 0.0,
+      "last_tick": 1201546
+    },
+    "auto_skill_1756569552_18": {
+      "status": "retired",
+      "strikes": 224,
+      "q_fence": 1e-06,
+      "uses": 8,
+      "avg_reward": 0.0,
+      "last_tick": 1202062
+    },
+    "auto_skill_1756218473_6": {
+      "status": "retired",
+      "strikes": 219,
+      "q_fence": 1e-06,
+      "uses": 4,
+      "avg_reward": 0.0,
+      "last_tick": 1202097
+    },
+    "auto_skill_1756659280_20": {
+      "status": "retired",
+      "strikes": 207,
+      "q_fence": 1e-06,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1201415
+    },
+    "auto_skill_1757195782_36": {
+      "status": "retired",
+      "strikes": 205,
+      "q_fence": 1e-06,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1202022
+    },
+    "auto_skill_1757407360_40": {
+      "status": "retired",
+      "strikes": 183,
+      "q_fence": 1e-06,
+      "uses": 8,
+      "avg_reward": 0.0,
+      "last_tick": 1202040
+    },
+    "auto_skill_1756747202_22": {
+      "status": "retired",
+      "strikes": 212,
+      "uses": 4,
+      "avg_reward": 0.0,
+      "last_tick": 1201986
+    },
+    "auto_skill_1756305165_7": {
+      "status": "retired",
+      "strikes": 206,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1201381
+    },
+    "auto_skill_1756747206_23": {
+      "status": "retired",
+      "strikes": 208,
+      "q_fence": 1e-06,
+      "uses": 1,
+      "avg_reward": 0.0,
+      "last_tick": 1201404
+    },
+    "auto_skill_1756912405_27": {
+      "status": "retired",
+      "strikes": 193,
+      "q_fence": 1e-06,
+      "uses": 3,
+      "avg_reward": 0.0,
+      "last_tick": 1202041
+    },
+    "auto_skill_1756305167_9": {
+      "status": "retired",
+      "strikes": 202,
+      "q_fence": 1e-06,
+      "uses": 1,
+      "avg_reward": 0.0,
+      "last_tick": 1201187
+    },
+    "auto_skill_1757001306_28": {
+      "status": "retired",
+      "strikes": 217,
+      "uses": 2,
+      "avg_reward": 0.0,
+      "last_tick": 1201513
+    },
+    "auto_skill_1757564039_43": {
+      "status": "retired",
+      "uses": 3,
+      "avg_reward": 0.0,
+      "strikes": 113,
+      "q_fence": 1e-06,
+      "last_tick": 1202060
+    },
+    "auto_skill_1757565779_44": {
+      "status": "retired",
+      "uses": 4,
+      "avg_reward": 0.0,
+      "strikes": 116,
+      "q_fence": 1e-06,
+      "last_tick": 1201788
+    },
+    "auto_skill_1757590385_45": {
+      "status": "retired",
+      "uses": 3,
+      "avg_reward": 0.0,
+      "strikes": 116,
+      "q_fence": 1e-06,
+      "last_tick": 1201818
+    },
+    "auto_skill_1757705565_46": {
+      "status": "retired",
+      "uses": 7,
+      "avg_reward": 0.0,
+      "strikes": 55,
+      "q_fence": 1e-06,
+      "last_tick": 1202032
+    },
+    "auto_skill_1757706267_47": {
+      "status": "retired",
+      "uses": 3,
+      "avg_reward": 0.0,
+      "strikes": 55,
+      "q_fence": 1e-06,
+      "last_tick": 1201775
+    },
+    "auto_skill_1757711950_48": {
+      "status": "retired",
+      "uses": 2,
+      "avg_reward": 0.0,
+      "strikes": 53,
+      "q_fence": 1e-06,
+      "last_tick": 1202160
+    },
+    "auto_skill_1757854830_49": {
+      "status": "retired",
+      "uses": 4,
+      "avg_reward": 0.0,
+      "strikes": 28,
+      "q_fence": 1e-06,
+      "last_tick": 1201993
+    },
+    "auto_skill_1757855533_50": {
+      "status": "retired",
+      "uses": 4,
+      "avg_reward": 0.0,
+      "strikes": 24,
+      "q_fence": 1e-06,
+      "last_tick": 1202018
+    },
+    "auto_skill_1757858036_51": {
+      "status": "retired",
+      "uses": 5,
+      "avg_reward": 0.0,
+      "strikes": 21,
+      "q_fence": 1e-06,
+      "last_tick": 1201884
+    }
+  },
+  "last_run_tick": 1202202,
+  "greenlight_last_tick": 1203057
+}

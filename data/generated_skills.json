@@ -1,0 +1,584 @@
+{
+  "generated": [
+    {
+      "name": "auto_skill_1756131898_1",
+      "timestamp": 1756131898.819725,
+      "tick": 95322,
+      "need_type": "goal_helper",
+      "need_details": {
+        "type": "goal_helper",
+        "goal": "bundle_success",
+        "progress": 0.0
+      }
+    },
+    {
+      "name": "auto_skill_1756131990_2",
+      "timestamp": 1756131990.6217978,
+      "tick": 95410,
+      "need_type": "goal_helper",
+      "need_details": {
+        "type": "goal_helper",
+        "goal": "bundle_success",
+        "progress": 0.0
+      }
+    },
+    {
+      "name": "auto_skill_1756132041_3",
+      "timestamp": 1756132041.7578208,
+      "tick": 95459,
+      "need_type": "goal_helper",
+      "need_details": {
+        "type": "goal_helper",
+        "goal": "bundle_success",
+        "progress": 0.0
+      }
+    },
+    {
+      "name": "auto_skill_1756218470_4",
+      "timestamp": 1756218470.8118136,
+      "tick": 180283,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "wolf_actions",
+        "q_value": -0.1805970014396805
+      }
+    },
+    {
+      "name": "auto_skill_1756218471_5",
+      "timestamp": 1756218471.8682823,
+      "tick": 180284,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "wolf_actions",
+        "q_value": -0.1805970014396805
+      }
+    },
+    {
+      "name": "auto_skill_1756218473_6",
+      "timestamp": 1756218473.9077966,
+      "tick": 180286,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "wolf_actions",
+        "q_value": -0.1805970014396805
+      }
+    },
+    {
+      "name": "auto_skill_1756305165_7",
+      "timestamp": 1756305165.1142106,
+      "tick": 262429,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.16826742460604513
+      }
+    },
+    {
+      "name": "auto_skill_1756305166_8",
+      "timestamp": 1756305166.2630384,
+      "tick": 262430,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.16826742460604513
+      }
+    },
+    {
+      "name": "auto_skill_1756305167_9",
+      "timestamp": 1756305167.4236252,
+      "tick": 262431,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.16826742460604513
+      }
+    },
+    {
+      "name": "auto_skill_1756391716_10",
+      "timestamp": 1756391716.5720978,
+      "tick": 341190,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.02030963251603234
+      }
+    },
+    {
+      "name": "auto_skill_1756391721_11",
+      "timestamp": 1756391721.1254249,
+      "tick": 341194,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.02030963251603234
+      }
+    },
+    {
+      "name": "auto_skill_1756391722_12",
+      "timestamp": 1756391722.3849428,
+      "tick": 341195,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.02030963251603234
+      }
+    },
+    {
+      "name": "auto_skill_1756478295_13",
+      "timestamp": 1756478295.842192,
+      "tick": 415355,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019840002650470968
+      }
+    },
+    {
+      "name": "auto_skill_1756478297_14",
+      "timestamp": 1756478297.2001288,
+      "tick": 415356,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019840002650470968
+      }
+    },
+    {
+      "name": "auto_skill_1756478298_15",
+      "timestamp": 1756478298.563018,
+      "tick": 415357,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019840002650470968
+      }
+    },
+    {
+      "name": "auto_skill_1756569536_16",
+      "timestamp": 1756569536.5287948,
+      "tick": 488470,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019708803335501027
+      }
+    },
+    {
+      "name": "auto_skill_1756569538_17",
+      "timestamp": 1756569538.0517375,
+      "tick": 488471,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019708803335501027
+      }
+    },
+    {
+      "name": "auto_skill_1756569552_18",
+      "timestamp": 1756569552.4122303,
+      "tick": 488482,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.15
+      }
+    },
+    {
+      "name": "auto_skill_1756659271_19",
+      "timestamp": 1756659271.3654428,
+      "tick": 556025,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.01966971158328754
+      }
+    },
+    {
+      "name": "auto_skill_1756659280_20",
+      "timestamp": 1756659280.9792936,
+      "tick": 556032,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.01966971158328754
+      }
+    },
+    {
+      "name": "auto_skill_1756659283_21",
+      "timestamp": 1756659283.8891048,
+      "tick": 556034,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.01966971158328754
+      }
+    },
+    {
+      "name": "auto_skill_1756747202_22",
+      "timestamp": 1756747202.9258187,
+      "tick": 618055,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019462827993208087
+      }
+    },
+    {
+      "name": "auto_skill_1756747206_23",
+      "timestamp": 1756747206.0406501,
+      "tick": 618057,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019462827993208087
+      }
+    },
+    {
+      "name": "auto_skill_1756755457_24",
+      "timestamp": 1756755457.685975,
+      "tick": 623581,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.01947713019388728
+      }
+    },
+    {
+      "name": "auto_skill_1756912355_25",
+      "timestamp": 1756912355.8292587,
+      "tick": 647840,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "wolf_howl",
+        "q_value": -0.0799999862182785
+      }
+    },
+    {
+      "name": "auto_skill_1756912384_26",
+      "timestamp": 1756912384.2431488,
+      "tick": 647859,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "wolf_howl",
+        "q_value": -0.0799999862182785
+      }
+    },
+    {
+      "name": "auto_skill_1756912405_27",
+      "timestamp": 1756912405.4239857,
+      "tick": 647873,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "wolf_howl",
+        "q_value": -0.0799999862182785
+      }
+    },
+    {
+      "name": "auto_skill_1757001306_28",
+      "timestamp": 1757001306.2894773,
+      "tick": 707080,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "wolf_howl",
+        "q_value": -0.010166378376356214
+      }
+    },
+    {
+      "name": "auto_skill_1757001308_29",
+      "timestamp": 1757001308.0764964,
+      "tick": 707081,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "wolf_howl",
+        "q_value": -0.010166378376356214
+      }
+    },
+    {
+      "name": "auto_skill_1757001311_30",
+      "timestamp": 1757001311.2293298,
+      "tick": 707083,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "wolf_howl",
+        "q_value": -0.010149311903207997
+      }
+    },
+    {
+      "name": "auto_skill_1757087787_31",
+      "timestamp": 1757087787.4948678,
+      "tick": 766853,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019580076204550878
+      }
+    },
+    {
+      "name": "auto_skill_1757087789_32",
+      "timestamp": 1757087789.306849,
+      "tick": 766854,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019580076204550878
+      }
+    },
+    {
+      "name": "auto_skill_1757087791_33",
+      "timestamp": 1757087791.0916715,
+      "tick": 766855,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019580076204550878
+      }
+    },
+    {
+      "name": "auto_skill_1757181310_34",
+      "timestamp": 1757181310.2126749,
+      "tick": 827931,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.01951757915266357
+      }
+    },
+    {
+      "name": "auto_skill_1757192337_35",
+      "timestamp": 1757192337.4609509,
+      "tick": 835254,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.01951757915266357
+      }
+    },
+    {
+      "name": "auto_skill_1757195782_36",
+      "timestamp": 1757195782.1226022,
+      "tick": 837517,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.01951757915266357
+      }
+    },
+    {
+      "name": "auto_skill_1757276708_37",
+      "timestamp": 1757276708.4318564,
+      "tick": 890916,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019471256859329572
+      }
+    },
+    {
+      "name": "auto_skill_1757290726_38",
+      "timestamp": 1757290726.1146576,
+      "tick": 900096,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "self_verify",
+        "q_value": -0.036307756282689875
+      }
+    },
+    {
+      "name": "auto_skill_1757290727_39",
+      "timestamp": 1757290727.8891633,
+      "tick": 900097,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "self_verify",
+        "q_value": -0.036307756282689875
+      }
+    },
+    {
+      "name": "auto_skill_1757407360_40",
+      "timestamp": 1757407360.5618784,
+      "tick": 922966,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019471256859329572
+      }
+    },
+    {
+      "name": "auto_skill_1757407362_41",
+      "timestamp": 1757407362.060484,
+      "tick": 922967,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019471256859329572
+      }
+    },
+    {
+      "name": "auto_skill_1757407363_42",
+      "timestamp": 1757407363.5375347,
+      "tick": 922968,
+      "need_type": "fix_failure",
+      "need_details": {
+        "type": "fix_failure",
+        "action": "entropy_guardian",
+        "q_value": -0.019471256859329572
+      }
+    },
+    {
+      "name": "auto_skill_1757564039_43",
+      "timestamp": 1757564039.4086382,
+      "tick": 1030635,
+      "need": {
+        "type": "mutate_top_actions",
+        "actions": [
+          "wolf_actions",
+          "wolf_follow_protect",
+          "self_bundle"
+        ]
+      }
+    },
+    {
+      "name": "auto_skill_1757565779_44",
+      "timestamp": 1757565779.738227,
+      "tick": 1031738,
+      "need": {
+        "type": "mutate_top_actions",
+        "actions": [
+          "wolf_actions",
+          "self_coder",
+          "signal"
+        ]
+      }
+    },
+    {
+      "name": "auto_skill_1757590385_45",
+      "timestamp": 1757590385.5665221,
+      "tick": 1047074,
+      "need": {
+        "type": "mutate_top_actions",
+        "actions": [
+          "wolf_actions",
+          "wolf_follow_protect",
+          "dream"
+        ]
+      }
+    },
+    {
+      "name": "auto_skill_1757705565_46",
+      "timestamp": 1757705565.551881,
+      "tick": 1116707,
+      "need": {
+        "type": "mutate_top_actions",
+        "actions": [
+          "mc_move_to_air",
+          "wolf_actions",
+          "wolf_unstuck"
+        ]
+      }
+    },
+    {
+      "name": "auto_skill_1757706267_47",
+      "timestamp": 1757706267.2344148,
+      "tick": 1117164,
+      "need": {
+        "type": "mutate_top_actions",
+        "actions": [
+          "self_coder",
+          "wolf_actions",
+          "dream"
+        ]
+      }
+    },
+    {
+      "name": "auto_skill_1757711950_48",
+      "timestamp": 1757711950.4166672,
+      "tick": 1120784,
+      "need": {
+        "type": "mutate_top_actions",
+        "actions": [
+          "wolf_actions",
+          "wolf_follow_protect",
+          "signal"
+        ]
+      }
+    },
+    {
+      "name": "auto_skill_1757854830_49",
+      "timestamp": 1757854830.037745,
+      "tick": 1154011,
+      "need": {
+        "type": "mutate_top_actions",
+        "actions": [
+          "wolf_follow_protect",
+          "wolf_actions",
+          "wolf_unstuck"
+        ]
+      }
+    },
+    {
+      "name": "auto_skill_1757855533_50",
+      "timestamp": 1757855533.7953308,
+      "tick": 1154451,
+      "need": {
+        "type": "mutate_top_actions",
+        "actions": [
+          "wolf_follow_protect",
+          "wolf_actions",
+          "self_coder"
+        ]
+      }
+    },
+    {
+      "name": "auto_skill_1757858036_51",
+      "timestamp": 1757858036.9516015,
+      "tick": 1156055,
+      "need": {
+        "type": "mutate_top_actions",
+        "actions": [
+          "wolf_follow_protect",
+          "wolf_actions",
+          "mc_breath_control"
+        ]
+      }
+    }
+  ],
+  "last_generation": 1757858036.9516025
+}

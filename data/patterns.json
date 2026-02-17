@@ -1,0 +1,20 @@
+{
+  "timestamp": 1757931497.5510218,
+  "tick": 1203203,
+  "patterns_found": 3,
+  "predictions": {
+    "wolf": 3.0,
+    "wolf_howl": 0.005,
+    "wolf_unstuck": 0.52
+  },
+  "strong_patterns": [
+    "wolf_actions works best at 12:00",
+    "wolf_howl works best at 12:00",
+    "wolf_unstuck works best at 12:00"
+  ],
+  "statistics": {
+    "hourly_patterns": 11,
+    "sequence_patterns": 88,
+    "reward_patterns": 5
+  }
+}

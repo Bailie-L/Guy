@@ -1,0 +1,27 @@
+{
+  "active": {
+    "dream_regular": {
+      "target": 4.8,
+      "current": 4,
+      "metric": "dreams_per_day",
+      "period": "daily",
+      "started": 97352,
+      "deadline": 183752
+    }
+  },
+  "completed": [
+    {
+      "name": "diversity",
+      "completed_tick": 97352,
+      "target": 10,
+      "achieved": 21
+    },
+    {
+      "name": "entropy",
+      "completed_tick": 97352,
+      "target": 0.5,
+      "achieved": 0.5053637173059689
+    }
+  ],
+  "failed": []
+}

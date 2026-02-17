@@ -1,0 +1,80 @@
+GUY STATE SNAPSHOT - DAY 2
+Generated: Mon Aug 25 07:49:38 AM SAST 2025
+================================================================
+============================================================
+🤖 GUY STATUS REPORT
+============================================================
+⏱️  Ticks: 64,689
+⏳ Uptime: 17:58:09
+🎲 Epsilon: 0.3489 (exploration rate)
+📚 Alpha: 0.1217 (learning rate)
+
+📊 LEARNED VALUES (Q):
+  heartbeat       +0.0500  ████
+  self_bundle     +0.0240  ██
+  stability_pilot +0.0214  ██
+  escape_trap     +0.0176  █
+  policy_optimizer +0.0176  █
+  resource_smart  +0.0176  █
+  compress_memory +0.0166  █
+  communicate     +0.0166  █
+
+📈 ACTION USAGE (64,705 total):
+  heartbeat       42,923 times (66.3%)
+  self_verify     3,786 times (5.9%)
+  self_bundle     1,708 times (2.6%)
+  communicate     1,477 times (2.3%)
+  reflect         1,413 times (2.2%)
+
+🎯 LAST 5 ACTIONS:
+  tick 64685: heartbeat       → reward +0.050
+  tick 64686: heartbeat       → reward +0.050
+  tick 64687: heartbeat       → reward +0.050
+  tick 64688: heartbeat       → reward +0.050
+  tick 64689: heartbeat       → reward +0.050
+
+💭 DREAMS: 2 recorded
+📝 NOTES: 99 saved
+
+📄 Log size: 31.52 MB
+📤 Outbox messages: 12
+
+🔄 Status: 🟢 ALIVE
+============================================================
+================================================================
+CURRENT Q-VALUES (Learning Preferences):
+{
+  "auto_doctor": 0.011900994849215876,
+  "communicate": 0.016624689002528246,
+  "compress_memory": 0.016636123797205703,
+  "dream": 0.011480353777832495,
+  "entropy_guard": 0.015427893472030376,
+  "entropy_regulator": 0.013550176410102002,
+  "escape_trap": 0.017565815365094998,
+  "heartbeat": 0.04999851705068161,
+  "loop_breaker": 0.015427893472030376,
+  "policy_optimizer": 0.017565815365094998,
+  "reflect": 0.013550176410102002,
+  "resource_smart": 0.017565815365094998,
+  "self_bundle": 0.023989516599325692,
+  "self_verify": 0.011900994849215876,
+  "signal": 0.013976541567510502,
+  "stability_pilot": 0.02136875348409274
+}
+================================================================
+LAST 10 ACTIONS:
+{"tick":64681,"action":"heartbeat","reward":0.05}
+{"tick":64682,"action":"heartbeat","reward":0.05}
+{"tick":64683,"action":"heartbeat","reward":0.05}
+{"tick":64684,"action":"heartbeat","reward":0.05}
+{"tick":64685,"action":"heartbeat","reward":0.05}
+{"tick":64686,"action":"heartbeat","reward":0.05}
+{"tick":64687,"action":"heartbeat","reward":0.05}
+{"tick":64688,"action":"heartbeat","reward":0.05}
+{"tick":64689,"action":"heartbeat","reward":0.05}
+{"tick":64690,"action":"heartbeat","reward":0.05}
+================================================================
+MESSAGES SENT: 12
+SKILLS LOADED: 0 skills
+TICK RATE: 54 ticks/min
+================================================================

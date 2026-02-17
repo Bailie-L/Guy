@@ -1,0 +1,11 @@
+{
+  "pairs": [
+    {"baseline": "wolf_actions", "candidate": "wolf_follow_protect"}
+  ],
+  "min_trials": 1,
+  "promote_margin": 0.00,
+  "rollback_margin": 0.02,
+  "delta_reward": 0.02,
+  "ema_alpha": 0.10,
+  "max_writes_per_act": 2
+}

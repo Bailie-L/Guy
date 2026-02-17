@@ -1,0 +1,141 @@
+GUY CONTROL CENTER — Real-time monitoring & intervention toolkit
+================================================================
+
+▶ QUICK STATUS
+--------------
+# Live status with auto-refresh (Ctrl+C to exit)
+watch -n 1 './check_guy.sh'
+
+# Current tick & uptime
+echo "Tick $(jq .ticks data/state.json) | Up $(python3 -c "import json; t=json.load(open('data/state.json'))['ticks']; h,m=divmod(t//60,60); print(f'{h}h{m:02d}m')")"
+
+# Is Guy actually alive? (shows tick progression)
+python3 -c "import json,time; t1=json.load(open('data/state.json'))['ticks']; time.sleep(2); t2=json.load(open('data/state.json'))['ticks']; print(f'{"🟢 ALIVE" if t2>t1 else "🔴 DEAD"} | {t2-t1} ticks/2s')"
+
+▶ REAL-TIME MONITORING
+----------------------
+# Live event stream (see Guy thinking)
+tail -f data/events.log | jq -c '{tick:.tick, action:.action, reward:.reward}'
+
+# Action distribution (last 100 ticks)
+tail -100 data/events.log | grep tick | jq -r .action | sort | uniq -c | sort -rn
+
+# Q-value evolution (watch learning)
+watch -n 2 'jq .q data/state.json | jq -S "to_entries | sort_by(-.value) | from_entries"'
+
+# Dominance detector with color alerts
+watch -n 5 'tail -500 data/events.log | grep tick | jq -r .action | awk '\''BEGIN{RED="\033[31m"; GRN="\033[32m"; YEL="\033[33m"; NC="\033[0m"} {c[$1]++} END{for(k in c) tot+=c[k]; print "Last 500 ticks:"; for(k in c){pct=c[k]/tot*100; col=NC; if(pct>=80)col=RED; else if(pct>=60)col=YEL; else if(pct>=40)col=GRN; printf "%s%-20s %4d (%5.1f%%)%s\n", col, k, c[k], pct, NC}}'\'''
+
+▶ REWARD/PENALIZE (shape behavior)
+----------------------------------
+# Instant reward injection
+reward() { echo "reward $1 $2" >> data/inbox.txt && echo "✓ Rewarded $1: $2"; }
+penalize() { echo "reward $1 -$2" >> data/inbox.txt && echo "✗ Penalized $1: -$2"; }
+
+# Usage:
+reward heartbeat 0.1
+reward communicate 0.5
+penalize dream 0.2
+
+# Batch rewards for good patterns
+cat >> data/inbox.txt << REWARDS
+reward self_bundle 0.8
+reward self_verify 0.7
+reward signal 0.3
+reward communicate 0.6
+REWARDS
+
+# Emergency interventions
+echo 'set epsilon 0.35' >> data/inbox.txt  # Force max exploration
+echo 'set alpha 0.5' >> data/inbox.txt     # Faster learning
+echo 'reward heartbeat -0.5' >> data/inbox.txt  # Break heartbeat loop
+
+▶ FORCE ACTIONS (bypass throttles)
+----------------------------------
+# Quick force commands
+force() { touch "data/force/$1.force" && echo "⚡ Forced $1"; }
+
+# Common forces:
+force dream         # Trigger evolution
+force communicate   # Get status message
+force bundle       # Create backup
+force verify       # Verify integrity
+force signal       # Dump internal state
+
+# Force all maintenance
+for skill in dream bundle verify communicate signal; do force $skill; done
+
+▶ MESSAGE INSPECTION
+--------------------
+# Latest outbox message (human-readable)
+ls -t data/outbox/msg-*.json 2>/dev/null | head -1 | xargs -I{} sh -c 'echo "=== {} ==="; jq -r .content {}'
+
+# All recent messages (last 5)
+for f in $(ls -t data/outbox/msg-*.json 2>/dev/null | head -5); do 
+  echo "[$f]"; jq -r '.content' "$f" | head -3; echo
+done
+
+# Signal stream (raw state dumps)
+tail -3 data/signal.jsonl | jq -c '{tick, top_q, epsilon, actions:.recent_actions}'
+
+▶ DIAGNOSTICS
+-------------
+# Skills loaded
+jq -r .skills[] data/state.json 2>/dev/null | sort
+
+# Memory usage
+du -sh data/* | sort -h
+
+# Event rate (ticks per minute)
+python3 -c "import json,time; lines=open('data/events.log').readlines()[-120:]; ticks=[json.loads(l) for l in lines if 'tick' in l]; dt=ticks[-1]['ts']-ticks[0]['ts']; print(f'{len(ticks)/(dt/60):.1f} ticks/min')"
+
+# Exploration vs exploitation ratio
+python3 -c "import json; s=json.load(open('data/state.json')); e=s.get('epsilon',0); print(f'Explore: {e*100:.1f}% | Exploit: {(1-e)*100:.1f}%')"
+
+▶ EMERGENCY CONTROLS
+--------------------
+# Soft restart (preserves state)
+pkill -f "python.*main.py"; sleep 1; nohup python3 main.py &
+
+# Hard stop
+pkill -9 -f "python.*main.py"
+
+# State backup before experiments
+cp data/state.json "data/state.backup.$(date +%Y%m%d-%H%M%S).json"
+
+# Restore from backup
+cp data/state.backup.*.json data/state.json
+
+▶ BEHAVIORAL TUNING
+-------------------
+# Encourage communication bursts
+for i in {1..3}; do 
+  force communicate
+  sleep 2
+  reward communicate 0.4
+done
+
+# Break out of loops
+python3 -c "import json; s=json.load(open('data/state.json')); s['epsilon']=0.35; json.dump(s,open('data/state.json','w'))"
+
+# Reset specific Q-values
+python3 -c "import json; s=json.load(open('data/state.json')); s['q']['heartbeat']=0.0; json.dump(s,open('data/state.json','w'))"
+
+▶ KEY FILES
+-----------
+data/state.json     - Guy's brain (Q-values, counters)
+data/events.log     - Full activity log
+data/signal.jsonl   - State snapshots
+data/outbox/        - Messages to humans
+data/inbox.txt      - Commands to Guy
+data/force/         - Trigger overrides
+skills/             - Loadable behaviors
+
+▶ TIPS
+------
+- Watch dominance detector - intervene if >80% single action
+- Reward immediately after desired behaviors
+- Use force to break throttles when testing
+- Keep epsilon 0.15-0.25 for healthy exploration
+- Monitor tick rate - should be ~60/min if healthy
+- Back up state.json before major changes

@@ -1,0 +1,14 @@
+{
+  "protocol": "guy.v1",
+  "allowed_actions": {
+    "wolf_howl": ["battle", "lonely", "play"],
+    "wolf_actions": ["guard", "patrol", "follow", "attack", "howl", "idle"],
+    "wolf_bond": ["pet", "feed", "play", "heal", "stay"],
+    "wolf_evolve": ["pup", "wolf", "dire"]
+  },
+  "rate_limits_per_min": {
+    "wolf_howl.battle": 2,
+    "wolf_howl.lonely": 1,
+    "wolf_howl.play": 1
+  }
+}

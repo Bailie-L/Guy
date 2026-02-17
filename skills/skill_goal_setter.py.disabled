@@ -1,0 +1,179 @@
+# Seed-0 skill: goal_setter - Sets and tracks daily/weekly objectives
+# Gives Guy PURPOSE beyond reward-chasing
+
+from pathlib import Path
+import json, time, random
+from collections import defaultdict
+
+ACT_NAME = "goal_setter"
+GOALS_FILE = Path("data/goals.json")
+MEMORY_FILE = Path("data/memory_bank.json")
+RUN_EVERY = 900  # 15 minutes - check goal progress
+
+# Goal templates
+GOAL_TYPES = {
+    "entropy": {"target": 0.5, "metric": "entropy", "period": "daily"},
+    "bundle_success": {"target": 0.9, "metric": "bundle_rate", "period": "weekly"},
+    "dream_regular": {"target": 12, "metric": "dreams_per_day", "period": "daily"},
+    "communication": {"target": 20, "metric": "messages_sent", "period": "daily"},
+    "exploration": {"target": 0.25, "metric": "epsilon_average", "period": "daily"},
+    "diversity": {"target": 10, "metric": "unique_actions", "period": "hourly"}
+}
+
+def calculate_metric(metric, state, events_window):
+    """Calculate current value for a metric"""
+    if metric == "entropy":
+        from math import log
+        actions = [e.get("action") for e in events_window if e.get("kind") == "tick"]
+        if not actions:
+            return 0
+        counts = defaultdict(int)
+        for a in actions:
+            counts[a] += 1
+        total = sum(counts.values())
+        entropy = 0
+        for count in counts.values():
+            p = count / total
+            if p > 0:
+                entropy -= p * log(p)
+        return entropy / log(len(counts)) if len(counts) > 1 else 0
+    
+    elif metric == "bundle_rate":
+        bundles = [e for e in events_window if e.get("action") == "self_bundle"]
+        if not bundles:
+            return 0
+        successful = sum(1 for b in bundles if b.get("reward", 0) > 0)
+        return successful / len(bundles) if bundles else 0
+    
+    elif metric == "dreams_per_day":
+        # Count dreams in last 24h
+        day_ago = time.time() - 86400
+        dreams = state.get("dreams", [])
+        recent = sum(1 for d in dreams if d.get("ts", 0) > day_ago)
+        return recent
+    
+    elif metric == "messages_sent":
+        return state.get("comm_count", 0)
+    
+    elif metric == "epsilon_average":
+        return state.get("epsilon", 0)
+    
+    elif metric == "unique_actions":
+        actions = set(e.get("action") for e in events_window[-100:] if e.get("kind") == "tick")
+        return len(actions)
+    
+    return 0
+
+def act(ctx):
+    s = ctx["state"]
+    ticks = int(s.get("ticks", 0))
+    
+    if False:  # Always run when selected
+        return 0.0
+    
+    # Load or initialize goals
+    goals = {}
+    if GOALS_FILE.exists():
+        try:
+            goals = json.loads(GOALS_FILE.read_text())
+        except:
+            goals = {"active": {}, "completed": [], "failed": []}
+    else:
+        goals = {"active": {}, "completed": [], "failed": []}
+    
+    # Load recent events for metrics
+    from pathlib import Path
+    from collections import deque
+    import json
+    
+    events = deque(maxlen=1000)
+    log_path = Path("data/events.log")
+    if log_path.exists():
+        with log_path.open("r") as f:
+            for line in f:
+                try:
+                    events.append(json.loads(line))
+                except:
+                    pass
+    
+    events_list = list(events)
+    
+    # Set new goals if none active
+    if not goals["active"]:
+        # Pick 2-3 goals based on current performance
+        available = list(GOAL_TYPES.keys())
+        selected = random.sample(available, min(3, len(available)))
+        
+        for goal_name in selected:
+            template = GOAL_TYPES[goal_name]
+            current = calculate_metric(template["metric"], s, events_list)
+            
+            # Set achievable target (20% improvement from current)
+            if current > 0:
+                target = min(current * 1.2, template["target"])
+            else:
+                target = template["target"] * 0.5  # Start easy
+            
+            goals["active"][goal_name] = {
+                "target": target,
+                "current": current,
+                "metric": template["metric"],
+                "period": template["period"],
+                "started": ticks,
+                "deadline": ticks + (3600 if template["period"] == "hourly" else 86400)
+            }
+    
+    # Check goal progress
+    reward = 0.0
+    completed_now = []
+    
+    for goal_name, goal in list(goals["active"].items()):
+        current = calculate_metric(goal["metric"], s, events_list)
+        goal["current"] = current
+        
+        # Check if completed
+        if current >= goal["target"]:
+            completed_now.append(goal_name)
+            goals["completed"].append({
+                "name": goal_name,
+                "completed_tick": ticks,
+                "target": goal["target"],
+                "achieved": current
+            })
+            reward += 0.1  # Reward for completing goal
+            
+        # Check if expired
+        elif ticks > goal.get("deadline", ticks + 86400):
+            goals["failed"].append({
+                "name": goal_name,
+                "failed_tick": ticks,
+                "target": goal["target"],
+                "achieved": current
+            })
+            del goals["active"][goal_name]
+    
+    # Remove completed goals
+    for name in completed_now:
+        del goals["active"][name]
+    
+    # Save goals
+    GOALS_FILE.write_text(json.dumps(goals, indent=2))
+    
+    # Update state with goal summary
+    s["goal_summary"] = {
+        "active": len(goals["active"]),
+        "completed": len(goals["completed"]),
+        "failed": len(goals["failed"]),
+        "next_goal": list(goals["active"].keys())[0] if goals["active"] else None
+    }
+    
+    # If goals completed, update memory
+    if completed_now and MEMORY_FILE.exists():
+        try:
+            memory = json.loads(MEMORY_FILE.read_text())
+            memory["lessons"][f"goals_achieved_{ticks}"] = completed_now
+            MEMORY_FILE.write_text(json.dumps(memory, indent=2))
+        except:
+            pass
+    
+    return reward
