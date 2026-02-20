@@ -14,8 +14,7 @@
 # - Works without changing main.py by nudging epsilon and Q-values.
 
 from pathlib import Path
-from collections import deque
-import os, json, time, shutil
+import os, time, shutil
 
 ACT_NAME = "resource_smart"
 

@@ -3,7 +3,7 @@
 
 from pathlib import Path
 from collections import defaultdict, deque
-import json, time, math
+import json, time
 
 ACT_NAME = "pattern_detector"
 PATTERNS_FILE = Path("data/patterns.json")
@@ -91,7 +91,7 @@ def predict_next_action(patterns, state):
     """Predict best action based on patterns"""
     predictions = {}
     current_hour = get_hour_of_day()
-    current_day = get_day_of_week()
+    get_day_of_week()
     last_action = state.get("last_actions", [{}])[-1].get("action") if state.get("last_actions") else None
     
     # Check hourly patterns

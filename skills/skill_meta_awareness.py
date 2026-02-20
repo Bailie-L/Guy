@@ -1,6 +1,5 @@
 # Meta-awareness skill: prevents duplicate fixes, monitors dream health, cleans broken logic
 from pathlib import Path
-import json
 import hashlib
 
 ACT_NAME = "meta_awareness"

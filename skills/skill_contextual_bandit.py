@@ -5,7 +5,7 @@
 # Safe, conservative, cooldown-protected.
 
 from __future__ import annotations
-import json, re, time, hashlib
+import json, re, time
 from pathlib import Path
 from typing import List, Tuple, Dict, Optional
 

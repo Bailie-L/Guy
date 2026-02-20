@@ -90,7 +90,7 @@ def act(ctx):
     # LEARN (off-policy nudges)
     # ----------------------------
     q = s.setdefault("q", {})
-    n = s.setdefault("n", {})
+    s.setdefault("n", {})
 
     # Nudge Q toward observed averages
     for a, avg in avgs.items():

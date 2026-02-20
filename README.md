@@ -1,3 +1,5 @@
+[![CI](https://github.com/Bailie-L/Guy/actions/workflows/ci.yml/badge.svg)](https://github.com/Bailie-L/Guy/actions/workflows/ci.yml)
+
 # Guy — Self-Evolving AI Agent Framework
 
 A lightweight, zero-dependency AI agent that learns which actions to take over time using reinforcement learning. Guy implements an epsilon-greedy multi-armed bandit algorithm with hot-loadable skills and the unique ability to generate, evaluate, and retire its own behaviors autonomously.

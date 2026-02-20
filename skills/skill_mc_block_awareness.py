@@ -1,7 +1,4 @@
 # Block awareness: avoid head-in-block / feet-in-block & water-at-head situations
-from pathlib import Path
-import json
-from collections import deque, Counter
 
 ACT_NAME = "mc_block_awareness"
 RUN_EVERY = 40        # check every 40 ticks
@@ -18,7 +15,7 @@ def _mc(s):
 
 def _in_suffocation(mc):
     head = str(mc.get("block_head","")).lower()
-    feet = str(mc.get("block_feet","")).lower()
+    str(mc.get("block_feet","")).lower()
     in_wall = bool(mc.get("in_wall", False))
     # Suffocation risk if in_wall or head is a solid block (not air/water)
     return in_wall or (head not in ("air","cave_air") and head not in LIQUID and (head in SOLID or head not in ("air","water","lava","void")))

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Prints what Guy has learned so far: ticks, epsilon/alpha, top Q-values (+ counts),
 # recent action histogram & avg rewards, next due windows, dream timing, and dominance warning.
-import json, time, pathlib, math, datetime
+import json, time, pathlib, datetime
 from collections import Counter, defaultdict, deque
 
 STATE = pathlib.Path("data/state.json")

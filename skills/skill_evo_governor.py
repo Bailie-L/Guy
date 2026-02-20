@@ -163,7 +163,7 @@ def act(ctx) -> Optional[float]:
     })
     ema: Dict[str, Optional[float]] = store.get("ema", {})
     n:   Dict[str, int]             = store.get("n", {})
-    last_decision: Optional[Dict[str, Any]] = store.get("last_decision")
+    store.get("last_decision")
     cool_until_tick: int = _to_int(store.get("cool_until_tick", 0))
     cool_until_ts: float = float(store.get("cool_until_ts", 0.0))
     now = _now()

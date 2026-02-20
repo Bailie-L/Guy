@@ -108,7 +108,6 @@ def act(ctx) -> Optional[float]:
     need_ratio = evol_total < target_total
     need_floors = len(floor_deficits) > 0
 
-    wrote = False
     lines: List[str] = []
     q: Dict[str, float] = s.get("q", {})
 
@@ -137,7 +136,6 @@ def act(ctx) -> Optional[float]:
             _append_inbox(lines)
             store["last_write"] = now
             _save_json_atomic(STORE, store)
-            wrote = True
 
     # Observability note
     counts_str = ", ".join(f"{k}:{counts[k]}" for k in EVOL_ACTIONS)

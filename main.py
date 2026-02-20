@@ -2,10 +2,10 @@
 # Features: event log, persistent state, epsilon-greedy bandit, hot-loadable skills,
 # safe shutdown, and SIZE-BASED LOG ROTATION (gzip + prune) inside main.py.
 
-import os, sys, json, time, random, signal, importlib.util, traceback, gzip, shutil
+import json, time, random, signal, importlib.util, traceback, gzip, shutil
 from pathlib import Path
 from types import ModuleType
-from typing import Dict, Any, List, Tuple, Optional
+from typing import Dict, Any, List, Tuple
 
 ROOT = Path.cwd()
 DATA_DIR = ROOT / "data"

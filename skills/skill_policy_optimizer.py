@@ -11,8 +11,8 @@
 # Returns +0.03 only when corrective action applied; otherwise 0.0.
 
 from pathlib import Path
-from collections import deque, Counter, defaultdict
-import json, math, time
+from collections import deque, Counter
+import json, math
 
 ACT_NAME = "policy_optimizer"
 

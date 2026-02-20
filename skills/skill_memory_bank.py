@@ -3,8 +3,7 @@
 # During dream phase: consolidates, prunes, and extracts patterns
 
 from pathlib import Path
-from collections import deque, defaultdict, Counter
-import json, time, hashlib
+import json, time
 
 ACT_NAME = "memory_bank"
 MEMORY_FILE = Path("data/memory_bank.json")

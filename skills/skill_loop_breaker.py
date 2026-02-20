@@ -13,7 +13,7 @@
 
 from pathlib import Path
 from collections import deque, Counter
-import json, time
+import json
 
 ACT_NAME = "loop_breaker"
 

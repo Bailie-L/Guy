@@ -17,7 +17,7 @@
 # Returns 0.0 (neutral) to avoid distorting the bandit; all shaping occurs via inbox reward lines.
 
 from pathlib import Path
-import json, time, os, shutil, glob
+import json, time
 
 ACT_NAME = "message_curator"
 

@@ -1,5 +1,5 @@
 from pathlib import Path
-import tempfile, zipfile, hashlib, json, time, shutil, os
+import tempfile, zipfile, hashlib, json, time, shutil
 ACT_NAME = "self_verify"
 FORCE_FLAG = Path("data/force/verify.force")
 THROTTLE_TICKS = 180

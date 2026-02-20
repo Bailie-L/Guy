@@ -6,7 +6,7 @@ Outputs: JSON files to data/outbox/ using Guy protocol (wolf_actions).
 """
 
 from __future__ import annotations
-import json, time, os
+import json, time
 from pathlib import Path
 from typing import Dict, Any
 

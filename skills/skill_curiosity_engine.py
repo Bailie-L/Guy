@@ -10,7 +10,7 @@
 
 from pathlib import Path
 from collections import deque, Counter
-import json, math, time
+import json
 
 ACT_NAME = "curiosity_engine"
 LOG_PATH = Path("data/events.log")
