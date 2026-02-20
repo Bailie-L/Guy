@@ -14,6 +14,50 @@ Guy runs a continuous loop executing one "tick" per second. Each tick it selects
 
 Originally developed as the brain for the FreeGuy AI Companion project.
 
+## Architecture
+
+```mermaid
+graph TD
+    LOOP["Main Loop — 1 tick/sec"] --> LOAD[Load & Discover Skills]
+    LOAD --> BANDIT[Bandit Selects Action<br/>epsilon-greedy]
+    BANDIT --> EXEC[Execute Skill]
+    EXEC --> REWARD[Collect Reward]
+    REWARD --> UPDATE[Update Q-Values<br/>exponential moving average]
+    UPDATE --> INBOX[Process Inbox Commands]
+    INBOX --> SAVE[Atomic State Save]
+    SAVE --> SLEEP[Sleep 1s]
+    SLEEP --> LOOP
+
+    EVO[evo_governor<br/>UCB Meta-Optimizer] -.->|promote / demote| BANDIT
+    CODER[self_coder<br/>Skill Generator] -.->|new skills| LOAD
+    CURIOSITY[curiosity_engine<br/>Novelty Rewards] -.->|diversity bonus| REWARD
+
+    style LOOP fill:#4a9eff,color:#fff
+    style BANDIT fill:#ff6b6b,color:#fff
+    style EVO fill:#ffa94d,color:#fff
+    style CODER fill:#69db7c,color:#fff
+    style CURIOSITY fill:#b197fc,color:#fff
+```
+
+## Operational Snapshot
+
+After 1.2M+ ticks of continuous learning:
+
+```
+Top Q-Values
+─────────────────────────────────────────
+mc_move_to_air    ████████░░  0.0800
+wolf_actions      ██░░░░░░░░  0.0200
+wolf_unstuck      ██░░░░░░░░  0.0185
+signal            ██░░░░░░░░  0.0177
+wolf_follow       █░░░░░░░░░  0.0165
+dream             █░░░░░░░░░  0.0153
+heartbeat         █░░░░░░░░░  0.0102
+
+Ticks: 1,203,275 | Skills: 91 (51 auto-generated)
+Epsilon: 0.25    | Alpha: 0.3
+```
+
 ## Features
 
 - **Zero Dependencies** — Runs on Python 3.10+ standard library only, no pip installs needed
